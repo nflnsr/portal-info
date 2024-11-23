@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator zod {
+  provider = "prisma-zod-generator"
+}
+
+generator typescriptInterfaces {
+  provider = "prisma-generator-typescript-interfaces"
+  output = "../../dto/src/interfaces.ts"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  name         String
+  email        String    @unique
+  password     String
+  phone_number String    @unique
+  role         role      @default(User)
+  comment      Comment[]
+  article      Article[]
+}
+
+model Article {
+  id            Int               @id @default(autoincrement())
+  user_id       Int
+  title         String
+  description   String
+  like          Int            @default(0)
+  comment_count Int            @default(0)
+  created_at    DateTime          @default(now())
+  category      article_category?
+  topic         String?
+  writter       String?
+  tags          String[]
+  comment       Comment[]
+  user          User              @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+model Comment {
+  id         String   @id @default(uuid())
+  article_id Int
+  user_id    Int
+  comment    String
+  created_at DateTime @default(now())
+  article    Article  @relation(fields: [article_id], references: [id], onDelete: Cascade)
+  user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+enum role {
+  Admin
+  User
+}
+
+enum article_category {
+  Nasional
+  Internasional
+  Politik
+  Ekonomi_Bisnis                @map("Ekonomi Bisnis")
+  Teknologi
+  Olahraga
+  Hiburan
+  Gaya_Hidup                    @map("Gaya Hidup")
+  Kesehatan
+  Edukasi
+  Sains
+  Lingkungan
+  Hukum_Kriminal                @map("Hukum Kriminal")
+  Human_Interest                @map("Human Interest")
+  Opini_Editorial               @map("Opini Editorial")
+  Properti_Real_Estate          @map("Properti Real Estate")
+  Transportasi
+  Pariwisata
+  Kuliner
+  Keuangan_Pribadi              @map("Keuangan Pribadi")
+  Agama_Spiritualitas           @map("Agama Spiritualitas")
+  Psikologi_Pengembangan_Diri   @map("Psikologi Pengembangan Diri")
+  Komunitas_Sosial              @map("Komunitas Sosial")
+  Sejarah
+  Budaya_Pop                    @map("Budaya Pop")
+  Ekonomi_Kreatif               @map("Ekonomi Kreatif")
+  Ekologi_Keanekaragaman_Hayati @map("Ekologi Keanekaragaman Hayati")
+}
