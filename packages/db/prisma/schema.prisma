@@ -1,15 +1,17 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearchPostgres"]
 }
 
-generator zod {
-  provider = "prisma-zod-generator"
-}
+// generator zod {
+//   provider = "prisma-zod-generator"
+//   output = "../src/new/generated/"
+// }
 
-generator typescriptInterfaces {
-  provider = "prisma-generator-typescript-interfaces"
-  output = "../../dto/src/interfaces.ts"
-}
+// generator typescriptInterfaces {
+//   provider = "prisma-generator-typescript-interfaces"
+//   output = "../../dto/src/interfaces.ts"
+// }
 
 datasource db {
   provider = "postgresql"
@@ -17,30 +19,34 @@ datasource db {
 }
 
 model User {
-  id           Int       @id @default(autoincrement())
-  name         String
-  email        String    @unique
-  password     String
-  phone_number String    @unique
-  role         role      @default(User)
-  comment      Comment[]
-  article      Article[]
+  id             Int       @id @default(autoincrement())
+  name           String
+  email          String    @unique
+  password       String
+  phone_number   String    @unique
+  role           Role      @default(User)
+  article        Article[]
+  comment        Comment[]
+  like           Like[]
+  created_at     DateTime  @default(now())
 }
 
 model Article {
   id            Int               @id @default(autoincrement())
   user_id       Int
+  user          User              @relation(fields: [user_id], references: [id], onDelete: Cascade)
   title         String
   description   String
-  like          Int            @default(0)
-  comment_count Int            @default(0)
-  created_at    DateTime          @default(now())
-  category      article_category?
+  category      Article_Category?
   topic         String?
   writter       String?
+  image         String?
   tags          String[]
+  liked_by      Like[]
+  like_count    Int               @default(0)
   comment       Comment[]
-  user          User              @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  comment_count Int               @default(0)
+  created_at    DateTime          @default(now())
 }
 
 model Comment {
@@ -53,12 +59,22 @@ model Comment {
   user       User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
 }
 
-enum role {
+model Like {
+  user       User    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  user_id    Int
+  article    Article @relation(fields: [article_id], references: [id], onDelete: Cascade)
+  article_id Int
+  liked_at DateTime @default(now())
+
+  @@id([user_id, article_id])
+}
+
+enum Role {
   Admin
   User
 }
 
-enum article_category {
+enum Article_Category {
   Nasional
   Internasional
   Politik
@@ -86,4 +102,6 @@ enum article_category {
   Budaya_Pop                    @map("Budaya Pop")
   Ekonomi_Kreatif               @map("Ekonomi Kreatif")
   Ekologi_Keanekaragaman_Hayati @map("Ekologi Keanekaragaman Hayati")
+
+  @@map("article_category")
 }

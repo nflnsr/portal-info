@@ -1,17 +1,38 @@
+import { responseHandler } from "@repo/server-utils";
 import { Request, Response, NextFunction, RequestHandler } from "express";
-import { ZodSchema } from "zod";
+import { ZodError, ZodSchema } from "zod";
 
 export const validate =
   <T>(schema: ZodSchema<T>): RequestHandler =>
   (req: Request, res: Response, next: NextFunction) => {
-    const { success, error, data } = schema.safeParse(req.body);
-    if (!success) {
-      res.status(400).json({
-        success: success,
-        errors: error,
-        data,
+    const parseBody = schema.safeParse(req.body);
+    if (!parseBody.success) {
+      const statusCode = statusCodeCheck<T>(parseBody.error);
+      responseHandler.optional({
+        category: "client_error",
+        code: statusCode,
+        res,
+        message: messageGenerator<T>(parseBody.error),
       });
-      return;
     }
     next();
   };
+
+const statusCodeCheck = <T>(error: ZodError<T>) => {
+  if (error.errors.some(err => err.message === "Required")) {
+    return 400;
+  } else {
+    return 422;
+  }
+};
+
+const messageGenerator = <T>(error: ZodError<T>) => {
+  return (
+    error.errors
+      .map(
+        (err) =>
+          `${err.message} at ${err.path[0].toString().replace("_", " ")}`,
+      )
+      .join(". ") + "."
+  );
+};
