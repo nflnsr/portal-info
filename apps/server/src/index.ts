@@ -3,13 +3,11 @@ import "module-alias/register";
 import express, { type Application } from "express";
 import middleware from "~/middleware";
 import http from "http";
-import routes from "~/routes";
-import { SERVER_PORT } from "@repo/utils/server";
+import { SERVER_PORT } from "@repo/server-utils";
 
 const app: Application = express();
 
 app.use(middleware);
-app.use(routes);
 
 const server = http.createServer(app);
 
@@ -20,5 +18,5 @@ server
     console.log(`Server is running on http://localhost:${port}`);
   })
   .on("error", (err) => {
-    throw new Error(err.message);
+    console.error("Server error:", err.message);
   });
