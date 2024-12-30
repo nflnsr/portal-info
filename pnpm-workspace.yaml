@@ -2,3 +2,6 @@ packages:
   - "apps/server"
   - "apps/web/*"
   - "packages/*"
+  - "packages/utils/server"
+  - "packages/utils/web"
+
