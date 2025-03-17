@@ -1,0 +1,7 @@
+const BASE_API_URL = process.env.NEXT_PUBLIC_BASE_API_URL;
+
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+
+const API_ACCESS_TOKEN = process.env.NEXT_PUBLIC_API_ACCESS_TOKEN;
+
+export { BASE_API_URL, API_KEY, API_ACCESS_TOKEN };

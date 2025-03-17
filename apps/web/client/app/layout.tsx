@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "./global.css";
+import { TanstackQueryProvider } from "provider/tanstack-query-provider";
+import { Header } from "@components/header/header";
+import { Adsense } from "@components/adsense/adsense";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -23,8 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Adsense />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <TanstackQueryProvider>
+          <Header />
+          {children}
+        </TanstackQueryProvider>
       </body>
     </html>
   );
