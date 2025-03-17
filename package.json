@@ -5,7 +5,8 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "dev:server": "turbo run dev --filter=server --filter=server-utils --filter=@repo/db --filter=@repo/dto",
+    "dev:server": "turbo run dev --filter=server --filter=@repo/server-utils --filter=@repo/db --filter=@repo/dto",
+    "dev:client": "turbo run dev --filter=client --filter=@repo/web-utils --filter=@repo/api",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
@@ -13,7 +14,7 @@
     "turbo": "^2.3.1",
     "typescript": "^5.7.2"
   },
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@9.0.6",
   "engines": {
     "node": ">=18"
   }

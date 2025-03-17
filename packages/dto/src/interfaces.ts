@@ -4,6 +4,36 @@ export type Role = "Admin" | "User";
 
 export type Article_Category = "Nasional" | "Internasional" | "Politik" | "Ekonomi_Bisnis" | "Teknologi" | "Olahraga" | "Hiburan" | "Gaya_Hidup" | "Kesehatan" | "Edukasi" | "Sains" | "Lingkungan" | "Hukum_Kriminal" | "Human_Interest" | "Opini_Editorial" | "Properti_Real_Estate" | "Transportasi" | "Pariwisata" | "Kuliner" | "Keuangan_Pribadi" | "Agama_Spiritualitas" | "Psikologi_Pengembangan_Diri" | "Komunitas_Sosial" | "Sejarah" | "Budaya_Pop" | "Ekonomi_Kreatif" | "Ekologi_Keanekaragaman_Hayati";
 
+export const articleCategory: Article_Category[] = [
+  "Nasional", 
+  "Internasional", 
+  "Politik", 
+  "Ekonomi_Bisnis", 
+  "Teknologi", 
+  "Olahraga", 
+  "Hiburan", 
+  "Gaya_Hidup", 
+  "Kesehatan", 
+  "Edukasi", 
+  "Sains", 
+  "Lingkungan", 
+  "Hukum_Kriminal", 
+  "Human_Interest", 
+  "Opini_Editorial", 
+  "Properti_Real_Estate", 
+  "Transportasi", 
+  "Pariwisata", 
+  "Kuliner", 
+  "Keuangan_Pribadi", 
+  "Agama_Spiritualitas", 
+  "Psikologi_Pengembangan_Diri", 
+  "Komunitas_Sosial", 
+  "Sejarah", 
+  "Budaya_Pop", 
+  "Ekonomi_Kreatif", 
+  "Ekologi_Keanekaragaman_Hayati"
+];
+
 export interface User {
   id: number;
   name: string;
