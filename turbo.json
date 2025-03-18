@@ -18,7 +18,7 @@
       "dependsOn": []
     },
     "@repo/ui#build": {
-      "dependsOn": ["@repo/web-utils#build", "@repo/dto#build"]
+      "dependsOn": ["@repo/web-utils#build"]
     },
     "lint": {
       "dependsOn": ["^lint"]
