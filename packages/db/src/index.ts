@@ -1,2 +1,2 @@
 export * from "./client"
-export * from "./generated/schemas"
+export * from "./generated/schemas/index"
