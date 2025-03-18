@@ -12,7 +12,7 @@
       "dependsOn": []
     },
     "@repo/dto#buils": {
-      "dependsOn": ["@repo/db#build"]
+      "dependsOn": []
     },
     "@repo/db#build": {
       "dependsOn": []
