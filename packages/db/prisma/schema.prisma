@@ -3,15 +3,15 @@ generator client {
   previewFeatures = ["fullTextSearchPostgres"]
 }
 
-generator zod {
-  provider = "prisma-zod-generator"
-  output = "../src/generated/"
-}
+// generator zod {
+//   provider = "prisma-zod-generator"
+//   output = "../src/generated/"
+// }
 
-generator typescriptInterfaces {
-  provider = "prisma-generator-typescript-interfaces"
-  output = "../../dto/src/interfaces.ts"
-}
+// generator typescriptInterfaces {
+//   provider = "prisma-generator-typescript-interfaces"
+//   output = "../../dto/src/interfaces.ts"
+// }
 
 datasource db {
   provider = "postgresql"
