@@ -4,28 +4,18 @@
   "tasks": {
     "client": {
       "dependsOn": ["@repo/dto#build", "@repo/ui#build", "@repo/web-utils#build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
     },
     "@repo/web-utils#build": {
-      "dependsOn": [],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**"]
+      "dependsOn": []
     },
     "@repo/dto#buils": {
-      "dependsOn": ["@repo/db#build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "dependsOn": ["@repo/db#build"]
     },
     "@repo/db#build": {
-      "dependsOn": [],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**", "!.prisma/**"]
+      "dependsOn": []
     },
     "@repo/ui#build": {
       "dependsOn": ["@repo/web-utils#build", "@repo/dto#build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**"]
     },
     "lint": {
       "dependsOn": ["^lint"]
