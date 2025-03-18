@@ -11,6 +11,7 @@
   "dependencies": {
     "@repo/api": "workspace:*",
     "@repo/ui": "workspace:*",
+    "@repo/web-utils": "workspace:*",
     "@tanstack/react-query": "^5.68.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -30,7 +31,6 @@
     "@repo/dto": "workspace:*",
     "@repo/eslint": "workspace:*",
     "@repo/tsconfig": "workspace:*",
-    "@repo/web-utils": "workspace:*",
     "@types/node": "^20.17.24",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
