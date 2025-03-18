@@ -3,7 +3,7 @@
   "ui": "tui",
   "tasks": {
     "client": {
-      "dependsOn": [],
+      "dependsOn": ["@repo/dto#build", "@repo/ui#build", "@repo/web-utils#build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
@@ -21,6 +21,11 @@
       "dependsOn": [],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**", "!.prisma/**"]
+    },
+    "@repo/ui#build": {
+      "dependsOn": ["@repo/web-utils#build", "@repo/dto#build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**"]
     },
     "lint": {
       "dependsOn": ["^lint"]
