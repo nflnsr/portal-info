@@ -1,1 +1,2 @@
-src/generated
+src/generated/schemas/*
+# !src/generated/schemas/index.ts
