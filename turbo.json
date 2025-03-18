@@ -8,18 +8,6 @@
     "client": {
       "dependsOn": ["@repo/dto#build", "@repo/ui#build", "@repo/web-utils#build"]
     },
-    "@repo/web-utils#build": {
-      "dependsOn": []
-    },
-    "@repo/dto#buils": {
-      "dependsOn": []
-    },
-    "@repo/db#build": {
-      "dependsOn": []
-    },
-    "@repo/ui#build": {
-      "dependsOn": ["@repo/web-utils#build"]
-    },
     "lint": {
       "dependsOn": ["^lint"]
     },
