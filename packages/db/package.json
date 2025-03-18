@@ -9,7 +9,7 @@
     "db:push": "npx prisma db push --skip-generate",
     "db:migrate": "pnpm prisma migrate dev",
     "db:deploy": "pnpm prisma migrate deploy",
-    "build": "tsc",
+    "build": "npx prisma generate && tsc",
     "dev": "tsc -w"
   },
   "keywords": [],
