@@ -2,6 +2,9 @@
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
   "tasks": {
+    "build": {
+      "dependsOn": ["@repo/db#build", "@repo/dto#build", "@repo/ui#build", "@repo/web-utils#build"]
+    },
     "client": {
       "dependsOn": ["@repo/dto#build", "@repo/ui#build", "@repo/web-utils#build"]
     },
