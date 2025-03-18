@@ -21,9 +21,9 @@
   },
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
-    "prisma": "^6.0.1",
-    "prisma-generator-typescript-interfaces": "^1.7.0",
-    "prisma-zod-generator": "^0.8.13",
+    "prisma": "6.0.1",
+    "prisma-generator-typescript-interfaces": "1.7.0",
+    "prisma-zod-generator": "0.8.13",
     "typescript": "^5.7.2"
   }
 }
