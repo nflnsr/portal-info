@@ -5,7 +5,7 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "env": ["PID"]
+      "env": ["NEXT_PUBLIC_PID"]
     },
     "lint": {
       "dependsOn": ["^lint"]
@@ -15,5 +15,5 @@
       "persistent": true
     }
   },
-  "globalEnv": ["PID"]
+  "globalEnv": ["NEXT_PUBLIC_PID"]
 }
