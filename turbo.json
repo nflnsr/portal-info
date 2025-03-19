@@ -4,7 +4,8 @@
   "globalDependencies": [".env"],
   "tasks": {
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "env": ["PID"]
     },
     "lint": {
       "dependsOn": ["^lint"]
