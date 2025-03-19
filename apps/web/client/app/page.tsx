@@ -63,7 +63,7 @@ export default function Home() {
 
   return (
     <main className="">
-      <div className="mx-auto my-10 h-52 w-full bg-black sm:w-5/6">
+      <div className="mx-auto my-10 h-52 w-full sm:w-5/6">
         <Banner
           dataAdSlot="2939043628"
           dataAdFormat="fluid"
@@ -143,7 +143,7 @@ export default function Home() {
           </Carousel>
         </div>
       </div>
-      <div className="mx-auto my-10 h-52 w-full bg-black sm:w-5/6">
+      <div className="mx-auto my-10 h-52 w-full sm:w-5/6">
         <Banner
           dataAdSlot="2939043628"
           dataAdFormat="fluid"
@@ -182,7 +182,6 @@ export default function Home() {
       <div className="mx-auto flex w-full max-w-[calc(1280px-120px)] flex-col justify-around py-4 sm:flex-row">
         <div className="top-[5.3rem] h-16 w-full px-5 sm:sticky sm:h-[635px] sm:w-52 sm:px-0">
           <Banner
-            className="bg-black"
             dataAdSlot="2939043628"
             dataAdFormat="fluid"
             dataFullWidthResponsive={true}
@@ -192,7 +191,6 @@ export default function Home() {
         <Categories className="pt-5 sm:pt-0" />
         <div className="top-[5.3rem] h-16 w-full px-5 sm:sticky sm:h-[635px] sm:w-52 sm:px-0">
           <Banner
-            className="bg-black"
             dataAdSlot="2939043628"
             dataAdFormat="fluid"
             dataFullWidthResponsive={true}

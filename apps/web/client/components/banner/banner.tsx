@@ -35,7 +35,7 @@ function Banner({
       style={{ display: "block", textAlign: "center" }}
       data-ad-layout={dataAdLayout}
       data-ad-format={dataAdFormat}
-      data-ad-client={`ca-pub-${process.env.PID!}`}
+      data-ad-client={`ca-pub-${process.env.NEXT_PUBLIC_PID!}`}
       data-ad-slot={dataAdSlot}
       data-full-width-responsive={dataFullWidthResponsive}
       suppressHydrationWarning

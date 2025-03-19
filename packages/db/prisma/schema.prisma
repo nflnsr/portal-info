@@ -5,7 +5,7 @@ generator client {
 
 // generator zod {
 //   provider = "prisma-zod-generator"
-//   output = "../src/new/generated/"
+//   output = "../src/generated/"
 // }
 
 // generator typescriptInterfaces {

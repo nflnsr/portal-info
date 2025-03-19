@@ -12,12 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "zod": "^3.23.8"
+    "@repo/db": "workspace:*",
+    "zod": "3.23.8"
   },
   "devDependencies": {
-    "@repo/db": "workspace:*",
     "@repo/eslint": "workspace:*",
     "@repo/tsconfig": "workspace:*",
-    "typescript": "^5.7.2"
+    "typescript": "^5.8.2"
   }
 }
