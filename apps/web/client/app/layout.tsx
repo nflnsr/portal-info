@@ -4,6 +4,7 @@ import "./global.css";
 import { TanstackQueryProvider } from "provider/tanstack-query-provider";
 import { Header } from "@components/header/header";
 import { Adsense } from "@components/adsense/adsense";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Adsense />
+        {/* <Adsense /> */}
+        <script
+          async={true}
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${process.env.NEXT_PUBLIC_PID!}`}
+          crossOrigin="anonymous"
+        ></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <TanstackQueryProvider>
