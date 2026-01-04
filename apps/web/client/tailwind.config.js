@@ -64,6 +64,32 @@ module.exports = {
           md: `calc(var(--radius) - 2px)`,
           sm: "calc(var(--radius) - 4px)",
         },
+        keyframes: {
+          "infinite-scroll": {
+            "0%": { transform: "translateY(-67.4%)" },
+            "100%": { transform: "translateY(0)" },
+          },
+          "infinite-scroll-reverse": {
+            "0%": { transform: "translateY(20%)" },
+            "100%": { transform: "translateY(calc(-50%-var(--gap-infinite-scroll))" },
+          },
+          "infinite-scroll-reverse-x": {
+            "0%": { transform: "translateX(0)" },
+            "100%": { transform: "translateX(-100%)" },
+          },
+          "infinite-scroll-x": {
+            "0%": { transform: "translateX(0)" },
+            "100%": { transform: "translateX(100%)" },
+          },
+        },
+        animation: {
+          "infinite-scroll": "infinite-scroll 15s linear infinite",
+          "infinite-scroll-reverse":
+            "infinite-scroll-reverse 10s linear infinite",
+          "infinite-scroll-x": "infinite-scroll-x 10s linear infinite",
+          "infinite-scroll-reverse-x":
+            "infinite-scroll-reverse-x 10s linear infinite",
+        },
       },
     },
     plugins: [require("tailwindcss-animate")],

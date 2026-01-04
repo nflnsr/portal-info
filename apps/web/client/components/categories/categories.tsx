@@ -10,7 +10,7 @@ function Categories({ className }: { className?: string }) {
       {articleCategory.map((category, i) => (
         <div key={i} className="mx-auto max-w-screen-md px-2 pb-4 sm:pb-6">
           <div className="flex items-center justify-between pb-1">
-            <h1 className="pr-2 font-mono text-2xl font-bold text-sky-400 sm:pl-5 sm:text-left">
+            <h1 className="pr-2 font-mono text-2xl font-bold text-cyan-600 sm:pl-5 sm:text-left">
               {category.replaceAll("_", " ")}
             </h1>
             <h2 className="text-lg underline">
