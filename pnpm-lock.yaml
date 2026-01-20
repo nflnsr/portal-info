@@ -221,6 +221,9 @@ importers:
 
   packages/api:
     dependencies:
+      '@repo/web-utils':
+        specifier: workspace:*
+        version: link:../utils/web
       '@tanstack/react-query':
         specifier: ^5.68.0
         version: 5.68.0(react@18.3.1)
@@ -231,9 +234,6 @@ importers:
       '@repo/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
-      '@repo/web-utils':
-        specifier: workspace:*
-        version: link:../utils/web
       '@types/node':
         specifier: ^22.13.10
         version: 22.13.10
