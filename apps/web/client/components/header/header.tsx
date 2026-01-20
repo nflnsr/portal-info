@@ -144,7 +144,7 @@ function Header() {
                 >
                   <a
                     href={nav.href}
-                    className="mx-auto block w-fit px-3 py-2 text-center font-semibold text-black hover:text-gray-600 hover:underline md:hover:text-gray-100"
+                    className="mx-auto block w-fit px-3 py-2 text-center font-semibold text-black hover:text-gray-600 hover:underline"
                   >
                     {nav.icon}
                   </a>

@@ -169,7 +169,7 @@ export default function Home() {
                   <div className="flex h-full items-center justify-around text-center">
                     {chunk.map((category, j) => (
                       <Card key={j} className="border-0">
-                        <CardContent>
+                        <CardContent className="cursor-pointer hover:text-cyan-700 hover:underline select-none">
                           {category.replaceAll("_", " ")}
                         </CardContent>
                       </Card>

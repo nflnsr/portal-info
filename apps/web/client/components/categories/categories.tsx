@@ -1,5 +1,5 @@
 import Image from "next/image";
-import contoh1 from "@assets/contoh-1.jpeg";
+import brandSample from "@assets/brand-sample.png";
 import Link from "next/link";
 import { articleCategory } from "@repo/dto";
 import { cn } from "@repo/web-utils";
@@ -14,14 +14,14 @@ function Categories({ className }: { className?: string }) {
               {category.replaceAll("_", " ")}
             </h1>
             <h2 className="text-lg underline">
-              <Link href={`/category/${category.replaceAll("_", "-").toLowerCase}`} className="text-wrap">Lihat Semua</Link>
+              <Link href={`/category/${category.replaceAll("_", "-").toLowerCase()}`} className="text-wrap">Lihat Semua</Link>
             </h2>
           </div>
           <div className="flex flex-col justify-center gap-4 rounded-lg border-2 border-black p-5 sm:flex-row">
             <div className="relative w-full sm:w-1/2">
               <div className="h-56 w-full sm:w-1/2">
                 <Image
-                  src={contoh1}
+                  src={brandSample}
                   alt="news"
                   layout="fill"
                   objectFit="cover"
@@ -47,7 +47,7 @@ function Categories({ className }: { className?: string }) {
             <div className="relative w-full sm:w-1/2">
               <div className="h-56 w-full sm:w-1/2">
                 <Image
-                  src={contoh1}
+                  src={brandSample}
                   alt="news"
                   layout="fill"
                   objectFit="cover"
