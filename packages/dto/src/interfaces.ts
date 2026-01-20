@@ -56,6 +56,7 @@ export interface Article {
   category: Article_Category | null;
   topic: string | null;
   writter: string | null;
+  image: string | null;
   tags: string[];
   liked_by?: Like[];
   like_count: number;
