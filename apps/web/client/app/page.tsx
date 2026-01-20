@@ -100,8 +100,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="">
-     
+    <main className="">     
       <div className="sticky top-[73px] float-end flex max-h-[calc(100vh-73px)] flex-col gap-5 overflow-hidden bg-black">
         <ul aria-hidden className="animate-infinite-scroll flex cursor-default select-none gap-5 text-center text-white [writing-mode:vertical-rl]">
           {[...slogan2, ...slogan2].map((item, i) => (

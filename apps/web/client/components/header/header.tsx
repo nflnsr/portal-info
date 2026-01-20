@@ -132,6 +132,7 @@ function Header() {
               </button>
             </form>
           </div>
+          {/* className="absolute top-16 z-10 mb-2 hidden h-[70svh] w-full overflow-y-scroll rounded-b-2xl bg-neutral-100 shadow-xl md:static md:ml-0 md:flex md:w-4/12 md:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-neutral-400 dark:[&::-webkit-scrollbar-thumb]:bg-slate-700 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:w-[8px]" */}
           <div
             className={`absolute top-16 z-10 hidden w-full overflow-y-scroll rounded-b-2xl bg-neutral-100 shadow-xl md:static md:ml-0 md:flex md:w-4/12 md:overflow-visible md:bg-transparent md:shadow-none [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-neutral-400 dark:[&::-webkit-scrollbar-thumb]:bg-slate-700 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:w-[8px]`}
             id="navbar-default"
