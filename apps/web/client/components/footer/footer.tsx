@@ -4,6 +4,7 @@ import { IoLogoInstagram } from "react-icons/io5";
 import AppDownloadImage from "@assets/app-download.png";
 import Image from "next/image";
 import { cn } from "@repo/web-utils";
+import Link from "next/link";
 
 function Footer({ className }: { className?: string }) {
   return (
@@ -59,7 +60,9 @@ function Footer({ className }: { className?: string }) {
         <div className="size-full text-white">
           <p className="font-bold">Lainnya</p>
           <ul className="pt-2">
-            <li className="cursor-pointer">Kebijakan Privasi</li>
+            <li className="cursor-pointer">
+              <Link href="/privacy-policy">Kebijakan Privasi</Link>
+            </li>
             <li className="cursor-pointer">Ketentuan Pengguna</li>
             <li className="cursor-pointer">FAQ</li>
           </ul>
