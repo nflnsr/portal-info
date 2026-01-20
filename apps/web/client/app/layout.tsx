@@ -5,6 +5,7 @@ import { TanstackQueryProvider } from "provider/tanstack-query-provider";
 import { Header } from "@components/header/header";
 import { Adsense } from "@components/adsense/adsense";
 import Script from "next/script";
+import { Footer } from "@components/footer/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -40,6 +41,7 @@ export default function RootLayout({
         <TanstackQueryProvider>
           <Header />
           {children}
+          <Footer />
         </TanstackQueryProvider>
       </body>
     </html>

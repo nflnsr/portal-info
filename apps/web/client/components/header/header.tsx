@@ -60,12 +60,13 @@ function Header() {
 
   return (
     <header className="sticky top-0 z-50 mx-auto max-w-[3840px] bg-white">
-      <nav className="border-b-[3px] border-gray-300 py-3">
+      <nav className="border-b-[1px] border-black py-3">
         <div className="mx-auto flex justify-around sm:max-w-screen-xl">
           <div className="flex w-full items-center justify-between px-4 md:w-[60%] md:px-0 lg:w-4/12 lg:justify-end">
             <a href="/" className="flex space-x-2">
               {/* <Image src={LogoIMG} className="size-8" alt="Logo" /> */}
               <h1 className="self-center whitespace-nowrap bg-gradient-to-r from-cyan-300 via-sky-400 to-teal-500 bg-clip-text text-xl font-bold leading-[24.5px] text-transparent drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.3)] md:text-2xl">
+              {/* <h1 className="self-center whitespace-nowrap bg-gradient-to-r from-cyan-300 via-sky-400 to-teal-500 bg-clip-text text-xl font-bold leading-[24.5px] text-transparent drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.3)] md:text-2xl"> */}
                 <span className="block leading-none tracking-tighter">
                   PORTAL
                 </span>
@@ -119,7 +120,7 @@ function Header() {
               <div className="h-full">
                 <input
                   type="text"
-                  className="h-full w-full rounded-lg border-2 border-b-4 border-gray-600 pb-1 pl-4 outline-4 outline-gray-400 drop-shadow-xl focus:border-2 focus:border-gray-400"
+                  className="h-full w-full rounded-lg border-2 border-b-4 border-gray-600 pb-1 pl-4 outline-4 outline-gray-900 drop-shadow-xl focus:border-2 focus:border-gray-700 focus:drop-shadow-lg"
                   placeholder="cari berita dengan kata kunci..."
                 />
               </div>
@@ -133,7 +134,7 @@ function Header() {
           </div>
           {/* className="absolute top-16 z-10 mb-2 hidden h-[70svh] w-full overflow-y-scroll rounded-b-2xl bg-neutral-100 shadow-xl md:static md:ml-0 md:flex md:w-4/12 md:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-neutral-400 dark:[&::-webkit-scrollbar-thumb]:bg-slate-700 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:w-[8px]" */}
           <div
-            className={`absolute top-16 z-10 hidden w-full overflow-y-scroll md:overflow-visible rounded-b-2xl bg-neutral-100 shadow-xl md:shadow-none md:static md:ml-0 md:flex md:w-4/12 md:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-neutral-400 dark:[&::-webkit-scrollbar-thumb]:bg-slate-700 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:w-[8px]`}
+            className={`absolute top-16 z-10 hidden w-full overflow-y-scroll rounded-b-2xl bg-neutral-100 shadow-xl md:static md:ml-0 md:flex md:w-4/12 md:overflow-visible md:bg-transparent md:shadow-none [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-neutral-400 dark:[&::-webkit-scrollbar-thumb]:bg-slate-700 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:w-[8px]`}
             id="navbar-default"
           >
             <ul className="flex flex-row items-center justify-center p-5 pb-0 text-sm font-medium sm:px-12 md:space-y-0 md:bg-transparent md:p-0 md:px-4 md:text-base">
@@ -144,14 +145,14 @@ function Header() {
                 >
                   <a
                     href={nav.href}
-                    className="mx-auto block w-fit px-3 py-2 text-center font-semibold text-black hover:text-gray-600 hover:underline md:hover:text-gray-100"
+                    className="mx-auto block w-fit px-3 py-2 text-center font-semibold text-black hover:text-gray-600 hover:underline"
                   >
                     {nav.icon}
                   </a>
                 </li>
               ))}
             </ul>
-            <div className="flex items-center justify-center gap-x-2 md:gap-x-0 px-5 md:px-0 text-2xl md:justify-start">
+            <div className="flex items-center justify-center gap-x-2 px-5 text-2xl md:justify-start md:gap-x-0 md:px-0">
               <div className="w-full py-2">
                 <input
                   type="search"
@@ -187,7 +188,7 @@ function Header() {
                 ))}
               </div>
             )}
-            <div className="md:hidden sticky bottom-0 block h-3 w-full bg-stone-100" />
+            <div className="sticky bottom-0 block h-3 w-full bg-stone-100 md:hidden" />
           </div>
         </div>
       </nav>

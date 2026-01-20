@@ -1,5 +1,5 @@
 import Image from "next/image";
-import contoh1 from "@assets/contoh-1.jpeg";
+import brandSample from "@assets/brand-sample.png";
 import Link from "next/link";
 import { articleCategory } from "@repo/dto";
 import { cn } from "@repo/web-utils";
@@ -10,18 +10,18 @@ function Categories({ className }: { className?: string }) {
       {articleCategory.map((category, i) => (
         <div key={i} className="mx-auto max-w-screen-md px-2 pb-4 sm:pb-6">
           <div className="flex items-center justify-between pb-1">
-            <h1 className="pr-2 font-mono text-2xl font-bold text-sky-400 sm:pl-5 sm:text-left">
+            <h1 className="pr-2 font-mono text-2xl font-bold text-cyan-600 sm:pl-5 sm:text-left">
               {category.replaceAll("_", " ")}
             </h1>
             <h2 className="text-lg underline">
-              <Link href={`/category/${category.replaceAll("_", "-").toLowerCase}`} className="text-wrap">Lihat Semua</Link>
+              <Link href={`/category/${category.replaceAll("_", "-").toLowerCase()}`} className="text-wrap">Lihat Semua</Link>
             </h2>
           </div>
           <div className="flex flex-col justify-center gap-4 rounded-lg border-2 border-black p-5 sm:flex-row">
             <div className="relative w-full sm:w-1/2">
               <div className="h-56 w-full sm:w-1/2">
                 <Image
-                  src={contoh1}
+                  src={brandSample}
                   alt="news"
                   layout="fill"
                   objectFit="cover"
@@ -47,7 +47,7 @@ function Categories({ className }: { className?: string }) {
             <div className="relative w-full sm:w-1/2">
               <div className="h-56 w-full sm:w-1/2">
                 <Image
-                  src={contoh1}
+                  src={brandSample}
                   alt="news"
                   layout="fill"
                   objectFit="cover"
