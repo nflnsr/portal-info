@@ -100,20 +100,32 @@ export default function Home() {
   ];
 
   return (
-    <main className="">     
+    <main className="">
       <div className="sticky top-[73px] float-end flex max-h-[calc(100vh-73px)] flex-col gap-5 overflow-hidden bg-black">
-        <ul aria-hidden className="animate-infinite-scroll flex cursor-default select-none gap-5 text-center text-white [writing-mode:vertical-rl]">
+        <ul
+          aria-hidden
+          className="flex animate-infinite-scroll cursor-default select-none gap-5 text-center text-white [writing-mode:vertical-rl]"
+        >
           {[...slogan2, ...slogan2].map((item, i) => (
-            <li key={i} className="flex gap-[var(--gap-infinite-scroll)] text-lg font-bold text-white whitespace-nowrap">
+            <li
+              key={i}
+              className="flex gap-[var(--gap-infinite-scroll)] whitespace-nowrap text-lg font-bold text-white"
+            >
               <p>{item.slogan1}</p>
               <p>{item.slogan2}</p>
               <p>{item.slogan3}</p>
             </li>
           ))}
         </ul>
-        <ul aria-hidden className="animate-infinite-scroll flex cursor-default select-none gap-5 text-center text-white [writing-mode:vertical-rl]">
+        <ul
+          aria-hidden
+          className="flex animate-infinite-scroll cursor-default select-none gap-5 text-center text-white [writing-mode:vertical-rl]"
+        >
           {[...slogan2, ...slogan2].map((item, i) => (
-            <li key={i} className="flex gap-5 text-lg font-bold text-white whitespace-nowrap">
+            <li
+              key={i}
+              className="flex gap-5 whitespace-nowrap text-lg font-bold text-white"
+            >
               <p>{item.slogan1}</p>
               <p>{item.slogan2}</p>
               <p>{item.slogan3}</p>
@@ -122,8 +134,8 @@ export default function Home() {
         </ul>
       </div>
 
-      <div className="sticky top-[73px] float-start pointer-events-none cursor-default flex max-h-[calc(100vh-73px)] rotate-180 flex-col gap-5 overflow-hidden bg-black">
-        <ul className="animate-infinite-scroll flex cursor-default select-none gap-5 text-center text-white [writing-mode:vertical-rl]">
+      <div className="pointer-events-none sticky top-[73px] float-start flex max-h-[calc(100vh-73px)] rotate-180 cursor-default flex-col gap-5 overflow-hidden bg-black">
+        <ul className="flex animate-infinite-scroll cursor-default select-none gap-5 text-center text-white [writing-mode:vertical-rl]">
           {[...slogan, ...slogan].map((item, i) => (
             <li key={i} className="flex gap-5 text-lg font-bold text-white">
               <p>{item.slogan1}</p>
@@ -132,7 +144,7 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <ul className="animate-infinite-scroll hover:animate-none flex cursor-default select-none gap-5 text-center text-white [writing-mode:vertical-rl]">
+        <ul className="flex animate-infinite-scroll cursor-default select-none gap-5 text-center text-white [writing-mode:vertical-rl] hover:animate-none">
           {[...slogan, ...slogan].map((item, i) => (
             <li key={i} className="flex gap-5 text-lg font-bold text-white">
               <p>{item.slogan1}</p>
@@ -144,14 +156,16 @@ export default function Home() {
       </div>
       <div className="sticky left-24 top-0 float-start h-screen w-[1px] bg-black" />
       <div className="sticky right-24 top-0 float-end h-screen w-[1px] bg-black" />
-      <div className="mx-auto h-64 w-full py-10 sm:w-5/6 max-w-screen-lg">
-        <Banner
-          dataAdSlot="2939043628"
-          dataAdFormat="fluid"
-          dataFullWidthResponsive={true}
-          dataAdLayout="in-article"
-          className="bg-black size-full"
-        />
+      <div className="mx-auto h-64 w-full max-w-screen-lg py-10 sm:w-5/6">
+        <div className="size-full bg-black">
+          <Banner
+            dataAdSlot="2939043628"
+            dataAdFormat="fluid"
+            dataFullWidthResponsive={true}
+            dataAdLayout="in-article"
+            className="size-full bg-black"
+          />
+        </div>
       </div>
       <div className="mx-auto flex w-[calc(100%-100px)] max-w-screen-lg justify-center">
         <div className="relative flex max-w-full justify-center border-[1px] border-b-0 border-gray-300 py-2 font-semibold shadow-xl md:rounded-lg">
@@ -168,7 +182,7 @@ export default function Home() {
                   <div className="flex h-full items-center justify-around text-center">
                     {chunk.map((category, j) => (
                       <Card key={j} className="border-0">
-                        <CardContent className="cursor-pointer hover:text-cyan-700 hover:underline select-none">
+                        <CardContent className="cursor-pointer select-none hover:text-cyan-700 hover:underline">
                           {category.replaceAll("_", " ")}
                         </CardContent>
                       </Card>
@@ -204,7 +218,9 @@ export default function Home() {
                   <div className="flex h-full items-center justify-around text-center">
                     {chunk.map((category, j) => (
                       <Card key={j}>
-                        <CardContent>{category.replaceAll("_", " ")}</CardContent>
+                        <CardContent>
+                          {category.replaceAll("_", " ")}
+                        </CardContent>
                       </Card>
                     ))}
                   </div>
@@ -225,14 +241,16 @@ export default function Home() {
           </Carousel>
         </div>
       </div>
-      <div className="mx-auto h-64 w-full py-10 sm:w-5/6 max-w-screen-lg">
-        <Banner
-          dataAdSlot="2939043628"
-          dataAdFormat="fluid"
-          dataFullWidthResponsive={true}
-          dataAdLayout="in-article"
-          className="bg-black size-full"
-        />
+      <div className="mx-auto h-64 w-full max-w-screen-lg py-10 sm:w-5/6">
+        <div className="size-full bg-black">
+          <Banner
+            dataAdSlot="2939043628"
+            dataAdFormat="fluid"
+            dataFullWidthResponsive={true}
+            dataAdLayout="in-article"
+            className="size-full bg-black"
+          />
+        </div>
       </div>
       <div className="mx-auto flex w-[100%] max-w-screen-lg flex-col gap-5 px-2 pb-10 pt-2 sm:flex-row sm:pb-14">
         {/* <div className="flex w-full items-center justify-around rounded-lg bg-neutral-200 py-5 shadow-md sm:max-w-20 sm:flex-col sm:gap-3">
@@ -262,42 +280,46 @@ export default function Home() {
           <News />
         </div>
       </div>
-      <div className="relative mx-auto flex max-w-screen-lg gap-5 px-3 md:flex-row flex-col">
-        <div className="lg:w-9/12 md:w-8/12 ">
+      <div className="relative mx-auto flex max-w-screen-lg flex-col gap-5 px-3 md:flex-row">
+        <div className="md:w-8/12 lg:w-9/12">
           <FeaturedNews />
         </div>
-        <div className="sticky top-20 flex h-full md:w-4/12 lg:w-3/12 md:flex-col gap-5">
+        <div className="sticky top-20 flex h-full gap-5 md:w-4/12 md:flex-col lg:w-3/12">
           <TrendingTopics className="w-full" />
-          <div className="md:size-full w-7/12">
+          <div className="w-7/12 bg-black md:size-full">
             <Banner
               dataAdSlot="2939043628"
               dataAdFormat="fluid"
               dataFullWidthResponsive={true}
               dataAdLayout="in-article"
-              className="h-[385px] bg-black w-full"
+              className="h-[385px] w-full bg-black"
             />
           </div>
         </div>
       </div>
       <div className="mx-auto flex w-full max-w-[calc(1280px-120px)] flex-col justify-around py-4 pt-5 sm:flex-row">
         <div className="top-[5.3rem] h-16 w-full px-5 sm:sticky sm:h-[635px] sm:w-52 sm:px-0">
-          <Banner
-            dataAdSlot="2939043628"
-            dataAdFormat="fluid"
-            dataFullWidthResponsive={true}
-            dataAdLayout="in-article"
-            className="bg-black size-full"
-          />
+          <div className="size-full bg-black">
+            <Banner
+              dataAdSlot="2939043628"
+              dataAdFormat="fluid"
+              dataFullWidthResponsive={true}
+              dataAdLayout="in-article"
+              className="size-full bg-black"
+            />
+          </div>
         </div>
         <Categories className="pt-5 sm:pt-0" />
         <div className="top-[5.3rem] h-16 w-full px-5 sm:sticky sm:h-[635px] sm:w-52 sm:px-0">
-          <Banner
-            dataAdSlot="2939043628"
-            dataAdFormat="fluid"
-            dataFullWidthResponsive={true}
-            dataAdLayout="in-article"
-            className="bg-black size-full"
-          />
+          <div className="size-full bg-black">
+            <Banner
+              dataAdSlot="2939043628"
+              dataAdFormat="fluid"
+              dataFullWidthResponsive={true}
+              dataAdLayout="in-article"
+              className="size-full bg-black"
+            />
+          </div>
         </div>
       </div>
       {/* <div className="pt-5">
