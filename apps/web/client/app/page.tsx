@@ -150,7 +150,7 @@ export default function Home() {
           dataAdFormat="fluid"
           dataFullWidthResponsive={true}
           dataAdLayout="in-article"
-          className="bg-black"
+          className="bg-black size-full"
         />
       </div>
       <div className="mx-auto flex w-[calc(100%-100px)] max-w-screen-lg justify-center">
@@ -231,7 +231,7 @@ export default function Home() {
           dataAdFormat="fluid"
           dataFullWidthResponsive={true}
           dataAdLayout="in-article"
-          className="bg-black"
+          className="bg-black size-full"
         />
       </div>
       <div className="mx-auto flex w-[100%] max-w-screen-lg flex-col gap-5 px-2 pb-10 pt-2 sm:flex-row sm:pb-14">
@@ -274,7 +274,7 @@ export default function Home() {
               dataAdFormat="fluid"
               dataFullWidthResponsive={true}
               dataAdLayout="in-article"
-              className="h-[385px] bg-black"
+              className="h-[385px] bg-black w-full"
             />
           </div>
         </div>
@@ -286,7 +286,7 @@ export default function Home() {
             dataAdFormat="fluid"
             dataFullWidthResponsive={true}
             dataAdLayout="in-article"
-            className="bg-black"
+            className="bg-black size-full"
           />
         </div>
         <Categories className="pt-5 sm:pt-0" />
@@ -296,7 +296,7 @@ export default function Home() {
             dataAdFormat="fluid"
             dataFullWidthResponsive={true}
             dataAdLayout="in-article"
-            className="bg-black"
+            className="bg-black size-full"
           />
         </div>
       </div>
