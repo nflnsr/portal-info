@@ -286,14 +286,16 @@ export default function Home() {
         </div>
         <div className="sticky top-20 flex h-full gap-5 md:w-4/12 md:flex-col lg:w-3/12">
           <TrendingTopics className="w-full" />
-          <div className="w-7/12 bg-black md:size-full">
-            <Banner
-              dataAdSlot="2939043628"
-              dataAdFormat="fluid"
-              dataFullWidthResponsive={true}
-              dataAdLayout="in-article"
-              className="h-[385px] w-full bg-black"
-            />
+          <div className="w-7/12 md:size-full">
+            <div className="size-full bg-black">
+              <Banner
+                dataAdSlot="2939043628"
+                dataAdFormat="fluid"
+                dataFullWidthResponsive={true}
+                dataAdLayout="in-article"
+                className="h-[385px] w-full bg-black"
+              />
+            </div>
           </div>
         </div>
       </div>
